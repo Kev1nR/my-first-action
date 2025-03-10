@@ -1,0 +1,21 @@
+name: CIChallenge2
+env:
+    ARTIFACT_NAME: "my-artifact"
+
+on: [ push ]
+
+jobs:
+    my-job: 
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code step
+              uses: actions/checkout@v2
+
+            - name: Upload artifact
+              uses: actions/upload-artifact@v2
+              with:
+                name: ${{ env.ARTIFACT_NAME }}
+                path: .
+            
+    
