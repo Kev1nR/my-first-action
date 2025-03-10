@@ -10,10 +10,10 @@ jobs:
 
         steps:
             - name: Checkout code step
-              uses: actions/checkout
+              uses: actions/checkout@v3
 
             - name: Upload artifact
-              uses: actions/upload-artifact
+              uses: actions/upload-artifact@v3
               with:
                 name: ${{ env.ARTIFACT_NAME }}
                 path: .
